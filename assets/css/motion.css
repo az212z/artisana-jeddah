@@ -1,0 +1,41 @@
+/* ====== Artisana — Premium Motion Layer (additive, brand-tuned) ======
+   Identity: deep navy + brass. Loaded after style.css. Non-breaking. */
+
+#mo-prog{
+  position:fixed; top:0; inset-inline:0; height:3px; z-index:1200;
+  transform-origin:right; transform:scaleX(0); pointer-events:none; will-change:transform;
+  background:linear-gradient(90deg, var(--brass), var(--navy));
+}
+
+/* hero image: slow settle + sheen sweep */
+.hero__media{position:relative; overflow:hidden;}
+.hero__media img{animation:mo-settle 1.7s var(--ease-out) both; will-change:transform;}
+@keyframes mo-settle{from{transform:scale(1.12)} to{transform:scale(1)}}
+.hero__media::after{
+  content:""; position:absolute; inset:0; z-index:3; pointer-events:none;
+  background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.18) 50%, transparent 60%);
+  transform:translateX(-130%); animation:mo-sheen 1.7s var(--ease-out) .5s 1;
+}
+@keyframes mo-sheen{0%{transform:translateX(-130%);opacity:0}18%{opacity:1}100%{transform:translateX(130%);opacity:0}}
+
+/* primary button: arrow + lift + glow (magnetic via JS) */
+.btn--primary{position:relative; will-change:transform; transition:transform .3s var(--ease-out), box-shadow .3s var(--ease-out), background .3s;}
+.btn--primary::after{content:"\2190"; display:inline-block; margin-inline-start:8px; transition:transform .35s var(--ease-out);}
+.btn--primary:hover{transform:translateY(-3px); box-shadow:0 16px 32px -14px rgba(14,34,54,.5);}
+.btn--primary:hover::after{transform:translateX(-6px);}
+.btn--ghost:hover, .btn--on-navy:hover{transform:translateY(-3px);}
+
+/* cards: accent top-line draw + lift + number pop */
+.feature{position:relative; overflow:hidden; transition:transform .4s var(--ease-out), box-shadow .4s var(--ease-out);}
+.feature::before{content:""; position:absolute; top:0; inset-inline:0; height:3px; background:var(--brass); transform:scaleX(0); transform-origin:right; transition:transform .45s var(--ease-out);}
+.feature:hover{transform:translateY(-6px);}
+.feature:hover::before{transform:scaleX(1);}
+.feature__num{transition:color .4s var(--ease-out), transform .4s var(--ease-out);}
+.feature:hover .feature__num{color:var(--brass); transform:translateY(-2px);}
+
+@media (prefers-reduced-motion:reduce){
+  #mo-prog{display:none;}
+  .hero__media img{animation:none; transform:none;}
+  .hero__media::after{animation:none; display:none;}
+  .btn--primary::after{transition:none;}
+}
