@@ -67,3 +67,10 @@ npx playwright test
 `index.html` · `404.html` · `assets/css/style.css` · `assets/js/main.js` · `assets/img/*` ·
 `favicon.svg` · `tests/site.spec.ts` · `playwright.config.ts` · `sales-message.md` ·
 `DESIGN-QUALITY-REPORT.md` · `.nojekyll`
+
+---
+## 🚀 النشر والاختبار
+- **الرابط:** https://az212z.github.io/artisana-jeddah/ · **المستودع:** https://github.com/az212z/artisana-jeddah
+- **Playwright:** ✅ status 200، صفر أخطاء console، نموذج تفاعلي، قائمة جوال ملء الشاشة (390/390)، لا تمرير أفقي، صفر صور مكسورة. (هاتف ثابت — لا واتساب؛ نموذج عرض سعر + اتصال)
+- **Lighthouse:** الأداء 76 · الوصولية 95 · أفضل الممارسات 100 · SEO 100
+- **التقييم (قوقل):** 4.4 (24) · **المدينة:** جدة · **Backend:** غير مربوط (نموذج → واتساب/اتصال + localStorage) · **الصور:** حقيقية من خرائط قوقل، مُنقّاة من صور المنافسين.
