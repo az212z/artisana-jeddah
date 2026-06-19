@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="شعار أرتيزانا">
+  <rect width="64" height="64" rx="12" fill="#0E2236"/>
+  <rect x="6" y="6" width="52" height="52" rx="9" fill="none" stroke="#C9A24B" stroke-width="1.5" opacity="0.6"/>
+  <path d="M32 13 L46 50 H39.4 L36.2 41 H27.8 L24.6 50 H18 Z M30 35 H34 L32 28 Z" fill="#C9A24B"/>
+</svg>
